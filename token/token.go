@@ -1,7 +1,5 @@
 package token
 
-import "fmt"
-
 type TokenType string
 
 type Token struct {
@@ -61,8 +59,6 @@ var keywords = map[string]TokenType{
 
 func LookupIdent(ident string) TokenType {
 	if tok, ok := keywords[ident]; ok {
-		fmt.Println(tok)
-		fmt.Println("-------")
 		return tok
 	}
 	return IDENT
